@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img class="logo" src="images/logo.svg" alt="logo">
+  <section class="content">
+    <div class="dashboard">
+      <div class="dashboard__left">
+        <div class="left-top pb35px">
+          <div class="input-header">
+            <h4 class="title">Bill</h4>
+            <h4 class="title title-red">Can't be zero</h4>
+          </div>
+            <div class="input-inner">
+              <img class="dollar" src="images/icon-dollar.svg" alt="">
+              <input id="billInput" type="number" class="sum-input" placeholder="0.00" required>
+            </div>
+        </div>
+        <div class="left-midle pb35px">
+          <h4 class="title">Select Tip %</h4>
+          <div id="selectTip" class="grid-panel">
+            <div class="panel-item">
+              <p>5%</p>
+            </div>
+            <div class="panel-item">
+              <p>10%</p>
+            </div>
+            <div class="panel-item">
+              <p>15%</p>
+            </div>
+            <div class="panel-item">
+              <p>25%</p>
+            </div><div class="panel-item">
+              <p>50%</p>
+            </div>
+            <div class="panel-item panel-item-custom">
+              <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="custom" placeholder="Custom" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="left-bottom">
+          <div class="input-header">
+            <h4 class="title">Number of People</h4>
+            <h4 class="title title-red-bottom">Can't be zero</h4>
+          </div>
+            <div class="input-inner">
+              <img class="dollar" src="images/icon-person.svg" alt="">
+              <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="peopleInput" type="text" class="sum-input" placeholder="0" required>
+            </div>
+        </div>
+      </div>
+      <div class="dashboard__right">
+        <div class="right-main">
+          <div class="main-item">
+            <div class="main-item-left">
+              <h4 class="title-wihth">Tip Amount</h4>
+              <p class="subtitle">/ person</p>
+            </div>
+            <h1 id="personTip" class="cost">$0.00</h1>
+          </div>
+          <div class="main-item">
+            <div class="main-item-left">
+              <h4 class="title-wihth">Total</h4>
+              <p class="subtitle">/ person</p>
+          </div>
+          <h1 id="totalCheck" class="cost">$0.00</h1>
+        </div>
+      </div>
+      <button id="btn" class="btn">Reset</button>
+    </div>
+  </section>
+<script src="main.js"></script>
+</body>
+</html>

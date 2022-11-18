@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+p, h4{
+    padding: 0;
+    margin: 0;
+}
+input {
+    font-family: inherit;
+    outline-color: var(--cyan-strong);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+:root {
+    /* color */
+    --white: hsl(0, 0%, 100%);
+    --cyan-100: hsl(189, 41%, 97%);
+    --cyan-200: hsl(185, 41%, 84%);
+    --cyan-300: hsl(184, 14%, 56%);
+    --cyan-400: hsl(186, 14%, 43%);
+    --cyan-500: hsl(183, 100%, 15%);
+
+    --cyan-strong: hsl(172, 67%, 45%);
+
+    /* typography */
+    --family: 'Space Mono', monospace;
+    --fs-num: 20px;
+    --fs-defult: 15px;
+}
+
+
+body {
+    font-family: var(--family);
+    font-size: var(--fs-num);
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.content {
+    height: 100vh;
+    background-color: var(--cyan-200);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard {
+    background-color: var(--white);
+    border-radius: var(--fs-defult);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 900px;
+    -webkit-box-shadow: 2px -1px 28px 5px rgba(142, 142, 142, 0.2);
+    -moz-box-shadow: 2px -1px 28px 5px rgba(142, 142, 142, 0.2);
+    box-shadow: 2px -1px 28px 5px rgba(142, 142, 142, 0.2);
+}
+.input-header {
+    display: flex;
+    justify-content: space-between;
+}
+.sum-input-red {
+    outline-color: red;
+}
+.title {
+    color: var(--cyan-400);
+    padding-bottom: 10px;
+}
+.title-red,
+.title-red-bottom {
+    color: rgb(250, 55, 55);
+    display: none;
+}
+.subtitle {
+    color: var(--cyan-400);
+}
+
+.dashboard__left {
+    font-size: var(--fs-defult);
+    width: 45%;
+    display: block;
+    padding: 20px;
+}
+.pb35px {
+    padding-bottom: 35px;
+}
+.input-inner {
+    position: relative;
+}
+.dollar {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.sum-input {
+    display: block;
+    background-color: var(--cyan-100);
+    width: 100%;
+    padding: 3px;
+    border-radius: 5px;
+    direction: rtl;
+    font-size: var(--fs-num);
+    color: var(--cyan-500);
+    padding-right: 15px;
+    padding-left: 40px;
+}
+
+.grid-panel{
+    display: grid;
+    grid-gap: 15px;
+
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: var(--fs-num);
+    color: var(--white);
+}
+.panel-item {
+    background-color: var(--cyan-500);
+    border-radius: 6px;
+    padding: 5px 0;
+    transition: background-color .4s, color .4s;
+    
+}
+.panel-item-custom {
+    background-color: var(--cyan-100);
+    color: var(--cyan-400);
+    padding: 0;
+}
+.panel-item-custom input {
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cyan-100);
+    font-size: var(--fs-num);
+    text-align: center;
+    color: var(--cyan-500);
+}
+.panel-item:hover    {
+    background-color: var(--cyan-strong);
+    color: var(--cyan-500);
+}
+.panel-item:first-child {
+    margin-left: 0;
+}
+.dashboard__right {
+    font-size: 15px;
+    color: var(--white);
+    background-color: var(--cyan-500);
+    border-radius: 15px;
+    width: 50%;
+    padding: 50px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    align-items: center;
+}
+
+.cost {
+    font-size: 40px;
+    color: var(--cyan-strong);
+}
+
+.btn {
+    background-color: var(--cyan-strong);
+    padding: 10px 0;
+    border-radius: 5px;
+
+    font-size: var(--fs-num);
+    text-transform: uppercase;
+    color: var(--cyan-500);
+    transition: background-color .3s;
+}
+.btn:hover {
+    background-color: var(--cyan-200);
+}
