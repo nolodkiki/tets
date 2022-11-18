@@ -197,3 +197,7 @@ body {
 .btn:hover {
     background-color: var(--cyan-200);
 }
+
+.red-outline {
+    outline-color: red;
+}
